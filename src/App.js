@@ -1,0 +1,48 @@
+import React, { useState, useEffect } from 'react'
+import './Main.css';
+import Mela from './img/Mela.png'
+import Xlogo from './img/Xlogo.png'
+
+function App() {
+
+  const [darkmode, setDarkmode] = React.useState(false)
+
+
+  return (
+    <div className={darkmode ? 'gif-container' : 'gif-container-light'}>
+    <div className='app-container-light'>
+      
+      <header>
+        <div className="nav-container">
+          <nav>
+            <h2 className={ darkmode ? 'logo-text-dark' : 'logo-text'}>X'n Ace Elite</h2>
+            {/* <img src={Xlogo}  className="xlogo" alt=""></img> */}
+            
+            <div className={darkmode ? 'right-menu-dark': 'right-menu'}>
+              <a href="#">Who are we?</a>
+              <a href="#">Services</a>
+              <a href="#">Contact</a>
+              <button className="btn-nav" 
+                onClick={() => setDarkmode(prevMode => !prevMode)}> Darkmode
+              </button>
+            </div>
+          </nav>
+      </div>
+      </header>
+
+    <section className="hero">
+            <div className="hero-inner-container">
+                <h1>Our Mission.<span> Ad eos saepe lucilius, noster postulant philosophia ea usu, qui dicta sadipscing</span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aliquam voluptas beatae vitae expedita. philosophia ea usu, qui dicta sadipscing.</p>
+                <button className="btn-hero">Find out More!</button>
+            </div>
+            <div className="hero-image-container">
+                <img src={Mela} className="hero-image" alt=""/>
+            </div>
+    </section>
+    </div>
+    </div>
+  );
+}
+
+export default App;
