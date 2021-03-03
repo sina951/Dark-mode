@@ -1,11 +1,25 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import './Main.css';
 import Mela from './img/Mela.png'
-import Xlogo from './img/Xlogo.png'
+// import Xlogo from './img/Xlogo.png'
 
 function App() {
 
-  const [darkmode, setDarkmode] = React.useState(false)
+  // 3
+  const [darkmode, setDarkmode] = React.useState(getTheme)
+
+  // 1
+  // 'dark' is key value identifier as first arguemnt. Second value is the boolean value true/false
+  React.useEffect(() => {
+    localStorage.setItem('dark', JSON.stringify(darkmode))
+  }, [darkmode])
+
+  // 2
+  // if getCurrentTheme does not exist set it by default to false
+  function getTheme() {
+    const getCurrentTheme = JSON.parse(localStorage.getItem('dark'))
+    return getCurrentTheme || false
+  }
 
 
   return (
