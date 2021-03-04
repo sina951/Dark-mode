@@ -3,10 +3,12 @@
 :root {
   --color-orange: #ff5c00;
   --color-white: #ffffff;
+  --color-smokewhite: #dcdcdc;
+  --color-pwhite: #ababab;
   --color-grey: #333333;
   --color-darkblue: #202945;
   --max-width: 1170px;
-  --transition: all 0.3s linear;
+  --transition: all 1s linear;
 }
 
 * {
@@ -23,10 +25,26 @@ body, html {
 
 h1 {
   font-family: "Mulish", sans-serif;
+  transition: var(--transition);
+
+}
+
+.hdark {
+  color: var(--color-smokewhite);
+
 }
 
 h2 {
   font-weight: 700;
+  transition: var(--transition);
+}
+
+.pdark {
+  font-weight: 700;
+  color: var(--color-pwhite);
+  transition: var(--transition);
+
+
 }
 
 .app-container-light {
@@ -37,7 +55,6 @@ h2 {
   /* background-color: var(--color-grey); */
   /* background-color: var(--color-white); */
   /* background-size: contain 900px; */
-
   height: 100vh;
   width: 90vw;
   margin: 0 auto;
@@ -50,6 +67,8 @@ h2 {
   background-image: linear-gradient(to right bottom, #333333ea, rgb(78, 78, 78)), url(./img/Randall.png);
   background-size: cover;
   background-position: center;
+
+
 }
 .gif-container-light {
   position: relative;
@@ -57,6 +76,7 @@ h2 {
   background-image: linear-gradient(to right bottom, #f0f0f0ea, rgb(250, 250, 250)), url(./img/Randall.png);
   background-size: cover;
   background-position: center;
+
 }
 
 header {
@@ -89,7 +109,7 @@ nav a {
 nav a:hover {
   /* color: #ff5c00; */
   color: var(--color-orange);
-  transition: .3s all ease-in-out;
+  transition: var(--transition);
 }
 
 .right-menu {
@@ -98,7 +118,7 @@ nav a:hover {
 
 }
 .right-menu a {
-  color: black;
+  color: var(--color-black);
   margin-left: 25px;
   font-size: 15px;
   font-weight: 900;
@@ -159,6 +179,12 @@ nav a:hover {
 .hero-image-container {
   grid-column: 3;
 }
+
+/* .hero-image {
+  /* filter: brightness(0.8) contrast(1.2); */
+  /* box-shadow: 5px 5px 15px 5px rgb(209, 22, 22); */
+  /* opacity: 0.5;
+} */
 
 .btn-hero {
   text-transform: uppercase;
