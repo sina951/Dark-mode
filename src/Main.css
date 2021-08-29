@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,200;1,900&display=swap");
+
+:root {
+  --color-orange: #ff5c00;
+  --color-white: #ffffff;
+  --color-smokewhite: #dcdcdc;
+  --color-pwhite: #ababab;
+  --color-grey: #333333;
+  --color-darkblue: #202945;
+  --max-width: 1170px;
+  --transition: all 1s linear;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: "Mulish", sans-serif;
+}
+
+h1 {
+  font-family: "Mulish", sans-serif;
+  transition: var(--transition);
+
+}
+
+.hdark {
+  color: var(--color-smokewhite);
+
+}
+
+h2 {
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.pdark {
+  font-weight: 700;
+  color: var(--color-pwhite);
+  transition: var(--transition);
+
+
+}
+
+.app-container-light {
+  /* height: 100%;
+  width: auto;
+  margin: 0 300px; */
+  /* background color should change in darkmode to grey: */
+  /* background-color: var(--color-grey); */
+  /* background-color: var(--color-white); */
+  /* background-size: contain 900px; */
+  height: 100vh;
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.gif-container {
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, #333333ea, rgb(78, 78, 78)), url(./img/Randall.png);
+  background-size: cover;
+  background-position: center;
+
+
+}
+.gif-container-light {
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, #f0f0f0ea, rgb(250, 250, 250)), url(./img/Randall.png);
+  background-size: cover;
+  background-position: center;
+
+}
+
+header {
+  padding-top: 3rem;
+}
+
+/* NAV BAR USING GRID*/
+.nav-container {
+  width: 100%;
+}
+
+.xlogo {
+  width: 300px;
+  margin: 0;
+}
+
+nav {
+  max-width: 1170px;
+  margin: 0 auto;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+}
+
+nav a {
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: .3s all ease-in-out;
+}
+nav a:hover {
+  /* color: #ff5c00; */
+  color: var(--color-orange);
+  transition: var(--transition);
+}
+
+.right-menu {
+  grid-column: 3;
+  align-self: center;
+
+}
+.right-menu a {
+  color: var(--color-black);
+  margin-left: 25px;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.right-menu-dark {
+  grid-column: 3;
+  align-self: center;
+
+}
+.right-menu-dark a {
+  color: var(--color-white);
+  margin-left: 25px;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.logo-text {
+  grid-column: 1/3;
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: underline 4px dotted var(--color-orange);  
+}
+
+.logo-text-dark {
+  color: var(--color-white);
+  grid-column: 1/3;
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: underline 4px dotted var(--color-orange);  
+}
+
+/* HERO SECTION USING GRID*/
+.hero {
+  width: 100%;
+  padding-top: 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  margin: 0 auto
+
+
+}
+.hero-inner-container {
+  grid-column: 1/3;
+  align-self: center;
+  padding: 0 auto;
+}
+.hero h1 {
+  font-size: 32px;
+  font-weight: 300;
+}
+.hero span {
+  font-size: 32px;
+}
+.hero p {
+  margin-top: 1rem;
+}
+.hero-image-container {
+  grid-column: 3;
+}
+
+/* .hero-image {
+  /* filter: brightness(0.8) contrast(1.2); */
+  /* box-shadow: 5px 5px 15px 5px rgb(209, 22, 22); */
+  /* opacity: 0.5;
+} */
+
+.btn-hero {
+  text-transform: uppercase;
+  background: var(--color-orange);
+  color: var(--color-white);
+  padding: 10px 30px;
+  display: inline-block;
+  font-weight: 700;
+  transition: var(--transition);
+  font-size: .875rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+  border-radius: 2px;
+  margin-top: 25px;
+  outline: none;
+
+}
+.btn-hero:hover {
+  color: var(--color-white);
+  background: var(--color-darkblue);
+}
+
+.btn-nav {
+  text-transform: uppercase;
+  background: var(--color-orange);
+  color: var(--color-white);
+  padding: 8px 5px;
+  display: inline-block;
+  font-weight: 700;
+  transition: var(--transition);
+  font-size: .875rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+  border-radius: 15px;
+  margin-left: 25px;
+  outline: none;
+}
+.btn-nav:hover {
+  color: var(--color-white);
+  background: var(--color-darkblue);
+}
