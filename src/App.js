@@ -43,6 +43,7 @@ function App() {
       </header>
 
     <section className="hero">
+      <div className="test_container"></div>
             <div className="hero-inner-container">
                 <h1 className={darkmode ? 'hdark' : 'h1'}>Our Mission.<span> Ad eos saepe lucilius, noster postulant philosophia ea usu, qui dicta sadipscing</span></h1>
                 <p className={darkmode ? 'pdark' : 'h2'}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aliquam voluptas beatae vitae expedita. philosophia ea usu, qui dicta sadipscing.</p>
